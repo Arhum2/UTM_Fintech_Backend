@@ -1,0 +1,55 @@
+### Django Project File Overview
+
+- **`manage.py`**:  
+  A command-line utility for managing your Django project. Use it to:
+  - Start the development server (`runserver`).
+  - Handle database migrations (`makemigrations` and `migrate`).
+  - Create admin users (`createsuperuser`).
+  - Run custom scripts (`python manage.py <command>`).
+
+- **`UTM_Pay_Backend/__init__.py`**:  
+  Marks the `UTM_Pay_Backend` folder as a Python package.
+
+- **`UTM_Pay_Backend/asgi.py`** (Do not edit):  
+  Entry point for ASGI-compatible web servers, used for asynchronous web requests.
+
+- **`UTM_Pay_Backend/settings.py`**:  
+  The main configuration file for your project. Customize installed apps, middleware, database settings, and more.
+
+- **`UTM_Pay_Backend/urls.py`**:  
+  Maps URLs to their corresponding views. Defines the routing structure of your application.
+
+- **`UTM_Pay_Backend/wsgi.py`** (Do not edit):  
+  Entry point for WSGI-compatible web servers, used for deploying the application.
+
+---
+
+### App-Specific Files (`myapp/`)
+
+- **`myapp/__init__.py`**:  
+  Marks the `myapp` folder as a Python package.
+
+- **`myapp/admin.py`**:  
+  Register your models here to manage them via the Django admin interface.
+
+- **`myapp/apps.py`**:  
+  Contains application-specific configurations. Django uses this file to include the app in the project.
+
+- **`myapp/models.py`**:  
+  Define your database models here. Models represent the structure of your data.
+
+- **`myapp/views.py`**:  
+  Write your application logic here. Views process requests and return responses.
+
+- **`myapp/tests.py`**:  
+  Write test cases for your app here to ensure code reliability and correctness.
+
+- **`myapp/migrations/`**:  
+  Stores migration files that track changes to your database models. These are auto-generated when you run `makemigrations`.
+
+### UTM_Pay_Backend vs myapp
+UTM_Pay_Backend is the django project and myapp is a app that is installed in our django project, we can make multiple apps and install them into the UTM_Pay_Backend project by editing
+settings.py
+
+### steps to run
+-> python manage.py runserver
